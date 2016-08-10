@@ -9,7 +9,7 @@ var db = new Sequelize('sstest', 'root', '', {
 });
 
 var Video = db.define('video', {
-  shortname: Sequelize.STRING
+  uniqueId: Sequelize.STRING
 });
 
 var VideoLocation = db.define('videolocation', {
@@ -38,7 +38,7 @@ Video.sync().then(function() {
   Metadata.sync().then(function() {
     VideoLocation.sync().then(function() {
       return Video.create({
-        shortname: 'HR Video'
+        uniqueId: '879dj31lkj'
       })
       .then(function(video) {
         Metadata.create({
@@ -60,12 +60,16 @@ Video.sync().then(function() {
 // Routing
 app.use(express.static('public'));
 
-app.get('/messages', function(req, res) {
-  VideoLocation.findAll({where: {
-    name:
-  }})
-    .then(function(vidpath) {
-      res.send(vidpath);
+app.get('/video', function(req, res) {
+  var videoName = 'HR Video Part 2'
+  Metadata.findAll({where: {
+    name: videoName
+  }}).then(function(metadata) {
+      VideoLocation.findOne({where: {
+        videoId: metadata[0].videoId
+      }}).then(function(location) {
+        res.redirect('/' + location.path);
+      })
     })
 });
 

@@ -3,10 +3,9 @@ const app = express();
 const Sequelize = require('sequelize');
 
 // Database setup
-
-
-var db = new Sequelize('sstest', 'root', '', {
-  host: 'localhost',
+console.log('new build');
+var db = new Sequelize('sherpa', 'sherpa', 'sherpa', {
+  host: 'db',
   dialect: 'mysql',
 });
 
@@ -76,6 +75,6 @@ app.get('/video', function(req, res) {
 });
 
 // Start server
-app.listen(5000, function() {
+app.listen(3000, function(err) {
   console.log('Listening on port 3000');
 });

@@ -1,0 +1,20 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sherpa
+      MYSQL_DATABASE: sherpa
+      MYSQL_USER: sherpa
+      MYSQL_PASSWORD: sherpa
+
+  web:
+    depends_on:
+      - db
+    build: .
+    links:
+      - db
+    ports:
+      - "3000:3000"
+    restart: always

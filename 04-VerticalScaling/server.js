@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const Sequelize = require('sequelize');
-const mysql = require('mysql');
 
 // Database setup
 var db = new Sequelize('sstest', 'root', '', {
@@ -62,6 +61,7 @@ Video.sync().then(function() {
 app.use(express.static('public'));
 
 app.get('/video', function(req, res) {
+  console.log('/video route hit');
   var videoName = 'HR Video Part 2'
   Metadata.findAll({where: {
     name: videoName
@@ -70,11 +70,12 @@ app.get('/video', function(req, res) {
         videoId: metadata[0].videoId
       }}).then(function(location) {
         res.redirect('/' + location.path);
+        // console.log('found video');
       })
     })
 });
 
 // Start server
 app.listen(5000, function() {
-  console.log('Listening on port 3000');
+  console.log('Listening on port 5000');
 });

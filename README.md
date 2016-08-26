@@ -1,28 +1,26 @@
-# Project Sherpa 
+# Project Sherpa
 ![Rendering preferences pane](https://avatars1.githubusercontent.com/u/20851055?v=3&s=200)
 
-Scaling web projects shouldn't be difficult. We are providing a step by step tutorial on how to effectively scale projects. 
+Scaling web projects shouldn't be difficult. We are providing a step by step tutorial on how to effectively scale projects.
 
-  - Single-Server Architecture 
-  - Vertical Scaling 
+  - Single-Server Architecture
+  - Vertical Scaling
   - Horizontal Scaling
-  - Service isolation 
+  - Service isolation
 
 You will also learn
 
-  - Single-Server Architecture 
-  - Vertical Scaling 
+  - Single-Server Architecture
+  - Vertical Scaling
   - Horizontal Scaling
-  - Service isolation 
-  
+  - Service isolation
+
 
 > Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat. -Sun Tzu
 
-### Level 1 Lessons 
+### Modules
 
-Level 1 introduces initial concepts and ideas that will set the framework for the next levels.  
-
-Lesson| Technologies           | Summary     |
+Module | Technologies           | Summary     |
 --------------------|------------------|-----------------------|
 01- Express with Static Assets | express, node, javascript   | Setup microservice using javascript    |
 02- Sequelize       | mysql, orm, server  | Add persistance storage to codebase    |
@@ -31,22 +29,15 @@ Lesson| Technologies           | Summary     |
 05-Horizontal Scaling           | docker, pound, nginx to explain horizontal scaling  | Learn about horizontal scaling  through docker containers
 06-Isolation Of Services         | cAdvisor, golang     | Isolating services from codebase   |
 
-
-### Level 2 Lessons - Horizontal Scaling deep dive
-Coming Soon..
-
-
-
- 
 ### Tech
 
-The following tools are used to teach scalibility. 
+The following tools are used to teach scalibility.
 
 * [React] - A javascript library for building user interfaces
 * [Avalanche] - A load and performance testing tool by [@scalibilitysherpa]
 * [Javascript] - the programming language of HTML and the Web
 * [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework 
+* [Express] - fast node.js network app framework
 * [golang] - an open source programming language that makes it easy to build simple, reliable, and efficient software.
 * [Docker] - an open platform for developers and sysadmins to build, ship, and run distributed applications
 * [nginx] - high performance load balancer
@@ -55,17 +46,12 @@ The following tools are used to teach scalibility.
 
 
 ### Services
-* [AWS] - Amazon web-services 
+* [AWS] - Amazon web-services
 * [DigitalOcean] - cloud deployment service
-
-
-
 
 ### Installation
 
 Requires [Node.js](https://nodejs.org/) v4+ to run.
-
-
 
 Install the dependencies and devDependencies and start the server.
 
@@ -75,8 +61,6 @@ $ npm install
 $ npm run
 ```
 
-
-
 ### Feedback
 
 Want to provide feedback? Great!
@@ -85,10 +69,6 @@ scalabilitysherpa.com
 Follow us on Twitter, Instragram, Facebook, Favorite us
 
 Open your favorite Terminal and run these commands.
-
-
-
-
 
 **2016 Your friends at ScalibilitySherpa.com**
 
@@ -107,9 +87,3 @@ Open your favorite Terminal and run these commands.
 [vagrant]: <https://vagrantup.com/>
 [AWS]: <https://aws.amazon.com/>
 [DigitalOcean]: <https://digitalocean.com/>
-
-
-
- 
-
- 
